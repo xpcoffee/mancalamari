@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mancalamari</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/7.2.4/react-redux.min.js" crossorigin referrerpolicy="no-referrer"></script>
+    <script src="app.js" type="text/babel"></script>
+
+    <style>
+        html {
+            height: 100%
+        }
+        body {
+            min-height: 100%;
+            font-family: sans-serif;
+        }
+        .game {
+            height: 100vh;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .board {
+            display: flex;
+            flex-direction: flex-row;
+        }
+        .pits {
+            display: grid;
+            grid-template-rows: 40px 40px;
+            grid-template-columns: 40px 40px 40px 40px 40px 40px;
+            direction: rtl;
+            justify-items: center;
+            align-items: center;
+        }
+        .pit, .mancala {
+            text-align: center;
+            border: 2px solid gray;
+            width: 30px;
+            border-radius: 20px;
+        }
+        .pit {
+            height: 30px;
+            line-height: 30px;
+        }
+        .mancala {
+            height: 60px;
+            line-height: 60px;
+        }
+        .mancala.player1 {
+            align-self: flex-end;
+        }
+        .mancala.player2 {
+            align-self: flex-start;
+        }
+        .playerMarker {
+            text-align: center;
+            border: 2px solid;
+            border-radius: 5px;
+            height: 150px;
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .player1 {
+            border-color: blue;
+        }
+        .player2 {
+            border-color: green;
+        }
+        .pointer {
+            cursor: pointer;
+        }
+        .errorMessage {
+            color: red;
+        }
+        .avatar {
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+        }
+        .startButtonContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="App"></div>
+</body>
+</html>
